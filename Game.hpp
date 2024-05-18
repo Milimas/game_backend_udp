@@ -16,7 +16,6 @@ public:
 	Game( void )
 	{
 		id = reinterpret_cast<uint64_t>(this);
-		std::cerr << id << "::" << __PRETTY_FUNCTION__ << std::endl ;
 	}
 	Game( const Game& rhs )
 	{
@@ -31,13 +30,12 @@ public:
 	}
 	~Game( void )
 	{
-		std::cerr << id << "::" << __PRETTY_FUNCTION__ << std::endl ;
 	}
 
 	Player join( const Player& player )
 	{
-		std::cout << "player: " << player.id << " joined :" << id << std::endl ;
 		players[player.addr] = player ;
+		std::cerr << __PRETTY_FUNCTION__ << ": PLAYER ID: " << player.id << " JOINED GAME ID: " << id << std::endl ;
 		return (player) ;
 	}
 };

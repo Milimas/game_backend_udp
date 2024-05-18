@@ -15,7 +15,6 @@ public:
 	Player( void )
 	{
 		id = reinterpret_cast<uint64_t>(this) ;
-		std::cerr << id << "::" << __PRETTY_FUNCTION__ << std::endl ;
 	}
 	Player( const Player& rhs )
 	{
@@ -30,7 +29,6 @@ public:
 	}
 	~Player ( void )
 	{
-		std::cerr << id << "::" << __PRETTY_FUNCTION__ << std::endl ;
 	}
 };
 
