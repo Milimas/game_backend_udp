@@ -12,7 +12,7 @@ int main(int argc, char **argv)
 	int portno ;
 
 	if (argc == 2)
-		portno = atoi(argv[2]) ;
+		portno = atoi(argv[1]) ;
 	else
 		portno = DEFAULT_PORT ;
 	SocketManager::startServer(portno) ;
